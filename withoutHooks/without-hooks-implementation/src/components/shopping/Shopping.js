@@ -28,26 +28,15 @@ export default class Shopping extends React.Component{
             confirmChoice: true
         }
         this.setState(prevState => {
-            return {
-                ...prevState,
-                cart: [...prevState.cart, newCartItem]
-            }
+            return {cart: [...prevState.cart, newCartItem]}
         })
         this.setState({cartItem:""})
     }
 
     handleRemove = (itemToRemove) => {
         this.setState(prevState => {
-            const filteredCart = prevState.cart.map(item => {
-                if (item.name===itemToRemove.name) {
-                    item.quantity=0
-                }
-                return item
-            })
-            return {
-                ...prevState,
-                cart: filteredCart
-            }
+            const filteredCart = prevState.cart.filter(item => item.name !== itemToRemove.name)
+            return {cart: filteredCart}
         })
     }
 
@@ -60,12 +49,8 @@ export default class Shopping extends React.Component{
                 }
                 return item
             })
-            return {
-                ...prevState,
-                cart: filteredCart
-            }
+            return {cart: filteredCart}
         })
-
     }
 
     render(){

@@ -3,3 +3,7 @@
     flex-direction: row;
     align-items: center;
 }
+
+.removed{
+    text-decoration: line-through;
+}

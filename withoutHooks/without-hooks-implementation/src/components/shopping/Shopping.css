@@ -27,7 +27,7 @@
     cursor: pointer;
 }
 
-.cart-container input{
+.cart-container .cart-input-container input{
     display: flex;
     width: 70%;
     background-color: #eee;
@@ -74,7 +74,4 @@
 }
 .cart-container ul li:last-child{
     margin-bottom: 10px;
-}
-.removed{
-    text-decoration: line-through;
 }

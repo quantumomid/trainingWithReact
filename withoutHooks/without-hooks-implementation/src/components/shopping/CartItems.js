@@ -7,8 +7,9 @@ export default function CartItems(props){
         return (
             <li className={`${!item.confirmChoice ? "removed" : null} cart-item-container`} key={index}>
                 <input type="checkbox" checked={item.confirmChoice} onChange={() => handleCheck(item.name)} />
-                {item.name}
-                {item.confirmChoice && <button className="remove-button" onClick={() => handleRemove(item)}>X</button>}
+                <p>{item.name}</p>
+                {/* {item.confirmChoice && <button className="remove-button" onClick={() => handleRemove(item)}>X</button>} */}
+                {<button className="remove-button" onClick={() => handleRemove(item)} disabled={!item.confirmChoice}>X</button>}
             </li>
         )
     })
