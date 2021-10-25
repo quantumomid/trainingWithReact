@@ -10,7 +10,8 @@ export default class Shopping extends React.Component{
             cart: [
                 {
                     name: "Olive Oil",
-                    quantity: 1
+                    quantity: 1,
+                    confirmChoice: true 
                 }
                 ]
         }
@@ -23,7 +24,8 @@ export default class Shopping extends React.Component{
     handleCartSubmit = () => {
         const newCartItem = {
             name: this.state.cartItem,
-            quantity: 1
+            quantity: 1,
+            confirmChoice: true
         }
         this.setState(prevState => {
             return {
@@ -49,6 +51,23 @@ export default class Shopping extends React.Component{
         })
     }
 
+    handleCheck = (name) => {
+        // console.log("handleCheck running")
+        this.setState(prevState => {
+            const filteredCart = prevState.cart.map((item, index) => {
+                if (item.name===name) {
+                    item.confirmChoice=!prevState.cart[index].confirmChoice
+                }
+                return item
+            })
+            return {
+                ...prevState,
+                cart: filteredCart
+            }
+        })
+
+    }
+
     render(){
         const { cart, cartItem } = this.state
 
@@ -67,7 +86,7 @@ export default class Shopping extends React.Component{
                 </div>
                 <div className="cart-list">
                     <h2>Your cart {cart.every(item => item.quantity ===0) ? "is empty" : ""}</h2>
-                    <CartItems cartItems={cart} handleRemove={this.handleRemove}/>
+                    <CartItems cartItems={cart} handleRemove={this.handleRemove} handleCheck={this.handleCheck}/>
                 </div>
             </div>
         )

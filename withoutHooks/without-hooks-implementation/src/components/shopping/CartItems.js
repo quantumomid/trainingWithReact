@@ -1,11 +1,14 @@
+import './CartItems.css'
+
 export default function CartItems(props){
-    const { cartItems, handleRemove } = props
+    const { cartItems, handleRemove, handleCheck } = props
 
     const cartItemsList = cartItems.map((item, index) => {
         return (
-            <li className={item.quantity===0 ? "removed" : null} key={index}>
+            <li className={`${!item.confirmChoice ? "removed" : null} cart-item-container`} key={index}>
+                <input type="checkbox" checked={item.confirmChoice} onChange={() => handleCheck(item.name)} />
                 {item.name}
-                {item.quantity!==0 && <button className="remove-button" onClick={() => handleRemove(item)}>X</button>}
+                {item.confirmChoice && <button className="remove-button" onClick={() => handleRemove(item)}>X</button>}
             </li>
         )
     })
