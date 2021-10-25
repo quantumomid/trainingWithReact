@@ -3,11 +3,11 @@ import TableBody from './TableBody.js'
 import './Table.css';
 
 
-export default function Table({data}){
+export default function Table(){
     return(
         <table>
             <TableHeader/>
-            <TableBody data={data}/>
+            <TableBody />
         </table>
     )
 }
