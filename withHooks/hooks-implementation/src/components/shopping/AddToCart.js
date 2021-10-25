@@ -1,3 +1,5 @@
+import './AddToCart.css'
+
 export default function AddToCart (props){
     const { handleCartChange, cartItem, handleCartSubmit } = props
     return(

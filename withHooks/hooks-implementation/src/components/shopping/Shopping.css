@@ -8,38 +8,7 @@
 .cart-container h1{
     text-align: center;
 }
-.cart-input-container{
-    display: flex;
-}
-.add-cart-button {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    align-self: center;
-    width: fit-content;
-    border-radius: 2vh;
-	border: 1px solid hsl(133, 100%, 40%);
-	background-color: hsl(133, 100%, 40%);
-	color: #FFFFFF;
-	font-size: 17px;
-	font-weight: bold;
-	padding: 10px 15px;
-    cursor: pointer;
-}
 
-.cart-container input{
-    display: flex;
-    width: 70%;
-    background-color: #eee;
-    border: none;
-    padding: 1.2vh 1.5vh;
-	margin: 5vh 2.5vh;
-    border-radius: 20px;
-}
-.cart-container input:focus{
-    border: 3px solid green; 
-    outline: none;
-}
 .cart-list {
     background-color: #fff;
 	border-radius: 2vh;
@@ -73,7 +42,4 @@
 }
 .cart-container ul li:last-child{
     margin-bottom: 10px;
-}
-.removed{
-    text-decoration: line-through;
 }

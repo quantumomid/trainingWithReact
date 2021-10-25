@@ -9,7 +9,8 @@ export default function Shopping(){
     const [cart, setCart] = useState([
                         {
                             name: "Olive Oil",
-                            quantity: 1
+                            quantity: 1,
+                            confirmChoice: true
                         }
                         ])
 
@@ -20,19 +21,28 @@ export default function Shopping(){
     const handleCartSubmit = () => {
         const newCartItem = {
             name: cartItem,
-            quantity: 1
+            quantity: 1,
+            confirmChoice: true
         }
-        setCart(prevState => {
-            return [...prevState, newCartItem]
+        setCart(prevCart => {
+            return [...prevCart, newCartItem]
         })
         setCartItem("")
     }
 
     const handleRemove = (itemToRemove) => {
-        setCart(prevState => {
-            const filteredCart = prevState.map(item => {
-                if (item.name===itemToRemove.name) {
-                    item.quantity=0
+        setCart(prevCart => {
+            const filteredCart = prevCart.filter(item => item.name!==itemToRemove.name) 
+            return filteredCart
+        })
+    }
+
+    const handleCheck = (name) => {
+        // console.log("handleCheck running")
+        setCart(prevCart => {
+            const filteredCart = prevCart.map((item, _index) => {
+                if (item.name===name) {
+                    item.confirmChoice=!item.confirmChoice
                 }
                 return item
             })
@@ -44,7 +54,7 @@ export default function Shopping(){
             <div className="cart-container">
                 <h1>Time to order</h1>
                     <AddToCart cartItem={cartItem} handleCartChange={handleCartChange} handleCartSubmit={handleCartSubmit} />
-                    <CartItems cartItems={cart} handleRemove={handleRemove}/>
+                    <CartItems cartItems={cart} handleRemove={handleRemove} handleCheck={handleCheck}/>
             </div>
     )
 }
