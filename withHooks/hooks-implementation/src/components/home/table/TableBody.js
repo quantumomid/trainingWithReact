@@ -2,7 +2,9 @@ import React, {useContext} from 'react'
 import { TableContext } from '../Home'
 
 export default function TableBody(){
+
     const value = useContext(TableContext)
+    
     const tableRows = value.map((playerData, index) => {
         const {SNo, name, medal, type, emoji, country, sports, age, gender} = playerData
             return (
