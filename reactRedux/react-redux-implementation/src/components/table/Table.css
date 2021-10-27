@@ -1,0 +1,49 @@
+/* TABLE */
+table { 
+    border-collapse: collapse;
+    text-align: center; 
+    /* height: fit-content; */
+}
+/* tr { border: none; } */
+td {
+  border-right: solid 3px black; 
+  border-left: solid 3px black;
+  padding: 10px;
+}
+th{
+    padding: 10px;
+}
+
+tr:last-child{
+    border-bottom: solid 2px black;
+}
+
+tbody tr {
+    background-color: rgb(255, 230, 0);
+}
+tbody tr:hover {
+    background-color: orange;
+}
+
+thead,
+thead tr,
+thead th
+{
+    border: solid 3px black
+}
+
+thead tr{
+    background-color: yellow;
+}
+
+thead tr:first-child{
+    background-color: pink;
+}
+
+thead tr:first-child th{
+    padding: 20px;
+}
+
+
+
+/*  */
