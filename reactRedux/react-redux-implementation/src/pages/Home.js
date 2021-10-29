@@ -9,10 +9,11 @@ export default function Home (){
     const dispatch = useDispatch();
     // retrieve posts from the state "post" inside of the redux store
     const posts = useSelector((state) => state.post.posts);
+
   
     useEffect(() => {
       dispatch(getPosts());
-      console.log(posts)
+    //   console.log(posts)
     }, []);
 
     return (

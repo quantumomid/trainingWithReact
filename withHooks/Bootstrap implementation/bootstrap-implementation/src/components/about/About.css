@@ -1,0 +1,33 @@
+
+
+.about-container img{
+    display: block;
+    width: 20%;
+    border: 4px solid black;
+    border-radius: 10px;
+}
+
+.about-section{
+    display: flex;
+    flex-direction: column;
+    background-color: pink;
+    width: 80vw;
+    border: 4px solid black;
+    /* border-radius: 2%; */
+}
+
+.about-section article{
+    display: flex;
+    flex-direction: row;
+    padding: 10px;
+    /* width: 70vw; */
+}
+
+.about-section article:nth-child(2){
+    flex-direction: row-reverse;
+}
+
+.about-section article p{
+    font-size: 20px;
+    padding: 0 10px;
+}

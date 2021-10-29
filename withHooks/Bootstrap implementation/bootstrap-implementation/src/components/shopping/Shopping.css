@@ -1,0 +1,45 @@
+.cart-container{
+    display: flex;
+    flex-direction: column;
+    align-self: flex-start;    
+    width: 50vw;
+}
+
+.cart-container h1{
+    text-align: center;
+}
+
+.cart-list {
+    background-color: #fff;
+	border-radius: 2vh;
+  	box-shadow: 0 14px 28px rgba(0,0,0,0.25), 
+			0 10px 10px rgba(0,0,0,0.22);
+	overflow: hidden;
+    padding: 0 10px;
+}
+.cart-list h2{
+    text-align: center;
+}
+.remove-button{
+    color: red;
+    font-size: 20px;
+    font-weight: bold;
+    background-color: #fff;
+    border: none;
+    cursor: pointer;
+}
+.cart-container ul{
+    display: flex;
+    flex-direction: column;
+
+}
+.cart-container ul li{
+    display: flex;
+    justify-content: space-between;
+    font-size: 20px;
+    list-style: none;
+    width: 100%;
+}
+.cart-container ul li:last-child{
+    margin-bottom: 10px;
+}

@@ -1,0 +1,55 @@
+
+.our-team-section{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    grid-gap: 20px;
+    background-color: palevioletred;
+    border: 5px solid black;
+    border-radius: 20px;
+    padding: 10px;
+}
+/* In above CSS rule - Made use of QUINCE's dynamic CSS grid 
+- automatically changes number of grid according to browser window size!!!
+- Note: also to make grid work for my code - i had to remove width and height attributes
+- I think the issue was the units being px or vw/vh - so in theory setting units with % might work
+- see session 5 React Training Himanshu 22 Oct 2021 about 23 mins and 52s in */
+
+.our-team-section article img{
+    width: 50%;
+    height: 45%;
+    border-radius: 50%;
+    margin: 0 0 5px 0;
+}
+.our-team-section article {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* width: 20vw;
+    height: 35vh; */
+    padding: 5px;
+}
+.our-team-section article p{
+    text-align: center;
+}
+.our-team-section article p:last-child{
+    text-align: left;
+}
+.team-member-info{
+    border: 3px solid black;
+    border-radius: 20px;
+    padding: 5px;
+    background-color: yellow;
+}
+.team-member-name{
+    font-size: 22px;
+    margin: 5px 0 0 0;
+}
+.team-member-position{
+    font-size: 18px;
+    margin: 5px 0 0 0;
+}
+.team-member-description{
+    font-size: 16px;
+    margin: 15px 0 0 0;
+}
