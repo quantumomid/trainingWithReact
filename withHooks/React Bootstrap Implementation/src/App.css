@@ -1,0 +1,44 @@
+.App{
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  height: 100vh;
+  align-items: center;
+  background-color: rgb(125, 215, 238);
+  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.App nav{
+  width: 50vw;
+  background-color: navy;
+  border-radius: 20px;
+  margin: 20px 0;
+}
+
+.App nav ul{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.App nav ul li{
+  list-style: none;
+}
+.App nav ul li a{
+  color: white;
+  font-size: 20px;
+  text-decoration: none;
+  padding: 10px;
+  border-radius: 20px;
+}
+.App nav ul li a:hover{
+  background-color: rgb(0, 0, 199);
+}
+.nav-active{
+  background-color: rgb(0, 0, 199);
+}
+.main{
+  display: flex;
+  height: 85vh;
+  align-items: center;
+}
