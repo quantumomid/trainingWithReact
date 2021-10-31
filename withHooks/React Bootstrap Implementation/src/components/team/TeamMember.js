@@ -1,19 +1,32 @@
+import {Card} from "react-bootstrap"
+
 export default function TeamMember (props){
     const { member, index, images } = props
 
     return (
-        <article>
-            <img src={`/images/${member.imgName}`} alt="Headshot of team member"/>
-            {/* <img src={images[index]} alt="Headshot of team member"/> */}
-            <div className="team-member-info">  
-                <p className="team-member-name"><strong>{member.name}</strong></p>
-                <p className="team-member-position">{member.position}</p>
-                <p className="team-member-description">{member.description}</p>
-            </div>
-        </article> 
-
+        <Card style={{ width: '18rem' }}>
+            <Card.Img variant="top" src={`images/${member.imgName}`} />
+            <Card.Body>
+                <Card.Title>{member.name}</Card.Title>
+                <Card.Subtitle>{member.position}</Card.Subtitle>
+                <Card.Text>
+                    {member.description}
+                </Card.Text>
+            </Card.Body>
+        </Card>
     )
 }
+
+
+// <article>
+// <img src={`/images/${member.imgName}`} alt="Headshot of team member"/>
+// {/* <img src={images[index]} alt="Headshot of team member"/> */}
+// <div className="team-member-info">  
+//     <p className="team-member-name"><strong>{member.name}</strong></p>
+//     <p className="team-member-position">{member.position}</p>
+//     <p className="team-member-description">{member.description}</p>
+// </div>
+// </article>  
 
 // // IMAGES
 // // METHOD 1 - loading images into variables in parent component and passing through as props to here 
