@@ -1,6 +1,6 @@
 import { useEffect } from "react"
 import { useSelector, useDispatch } from "react-redux";
-import { getPosts } from "../actions/postActions";
+import { getPosts } from "../actions/fetchActions";
 import Table from "../components/table/Table";
 import './Home.css'
 
